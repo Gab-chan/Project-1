@@ -1,1 +1,19 @@
-# Project-1
+# Game Hunt
+
+
+## Project Description
+
+
+## Team Members
+- Nelson Cadenas
+- Pedro Murillo 
+- Brent Haskins
+
+## Sketch
+
+
+## APIs to be used
+
+
+## Tasks
+
