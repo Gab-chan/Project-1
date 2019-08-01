@@ -1,3 +1,31 @@
+.jumbomargin {
+    margin-bottom: 5%;
+}
+
+.searchbox {
+    display: inline-block;
+    width: 30%;
+    height: 42px;
+    margin-right: 1.5%;
+}
+
+.searchbtn {
+    width: 10%;
+    height: 42px;
+}
+
+
+.gamecontainer {
+    height: 500px;
+    width: 100%;
+}
+
+
+
+
+
+
+
 .gamebox {
     margin-bottom: 5%;
     background-image: linear-gradient(white, white, rgb(66, 207, 73));
@@ -35,3 +63,5 @@
     transform: scale(1.03, 1.03);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
+
