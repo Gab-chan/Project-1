@@ -13,7 +13,8 @@
 
 
 ## APIs to be used
-
+Bestbuy
+Twitch
 
 ## Tasks
 
