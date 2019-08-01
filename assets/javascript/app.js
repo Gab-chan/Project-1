@@ -31,19 +31,19 @@ $.ajax({
       console.log(response);
 
       var gameImg = $("<img>").attr("src", response.products[0].image);
-
-      // Transfer content to HTML
-      $(".gameimg").append(gameImg);
-      $(".gamename").text(JSON.stringify(response.products[0].albumTitle));
-      $(".gamedesc").text(JSON.stringify(response.products[0].shortDescription));
-      $(".gameprice").text("Price: " + JSON.stringify(response.products[0].salePrice));
-
-      $(gameImg).width(160);
-      $(gameImg).height(140);
-
-
+      
       for (var i = 0; i < response.products.length; i++) {
-        $(".gamebox").clone().appendTo("body").text(response.products[i].albumTitle);
+
+
+        $(".gamebox").clone().appendTo("body");
+        $(".gameimg").append().html(gameImg);
+        $(".gamename").text(response.products[i].albumTitle);
+        $(".gamedesc").text(response.products[i].shortDescription);
+        $(".gameprice").text(response.products[i].salePrice);
+
+        $(gameImg).width(160);
+        $(gameImg).height(140);
+    
           console.log(response.products[i].albumTitle);
       }
     
