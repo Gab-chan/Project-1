@@ -1,0 +1,101 @@
+/* colors: 
+#1A1A1D
+#4E4E50
+#6F2232
+#950740
+#C3073F */
+
+#body1{
+    background-color: #1A1A1D;
+
+}
+
+#splash{
+    background-color: #4E4E50;
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top: 280px;
+    padding: 5%;
+    
+}
+
+#sph1{
+    color: #C3073F;
+    font-family: fantasy;
+    text-align: center;
+    font-size: 400%;
+}
+
+#spp{
+    text-align: center;
+    color: #1A1A1D
+}
+
+.body2{
+    background-color: #C3073F;
+}
+
+.homediv{
+    background-color: #4E4E50;
+    color: azure;
+    font-family: cursive;
+    width: 40%;
+    text-align: center;
+    position: relative;
+    left: 40%;
+    bottom: 300px;
+    padding: 2%;
+    margin-bottom: 1%;
+    
+}
+
+#hometopic{
+    background-image: url("../Images/target_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #C3073F;
+    width: 25%;
+    height: 480px;
+    position: relative;
+    left: 5%;
+    top: 100px;
+    padding: 2%;
+}
+
+#topictext1{
+    text-align: center;
+    margin-top: 40%;
+}
+
+.footer{
+    width: 100%;
+    background-color: #1A1A1D;
+    color: azure;
+    position: fixed;
+    bottom: 0%;
+}
+
+.maintopic{
+    background-color: #4E4E50;
+    color:azure;
+    text-align: center;
+    font-family: cursive;
+    width: 30%;
+    position: relative;
+    left: 30%;
+    top: 30px;
+    padding: 2%;
+}
+
+.big1{
+    position: relative;
+    top: 120px;
+    left: 5%;
+}
+
+.big2{
+    position: relative;
+    top: 120px;
+    left: 9%;
+}

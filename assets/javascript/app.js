@@ -6,7 +6,7 @@ var firebaseConfig = {
     storageBucket: "",
     messagingSenderId: "1000072791220",
     appId: "1:1000072791220:web:afef53e16c957cea"
-  };
+};
 
 
 firebase.initializeApp(config);
