@@ -1,13 +1,12 @@
 $(document).ready(function () {
-    
 
-    let queryURL = 'https://api.twitch.tv/helix/streams?first=10';
+    let queryURL = 'https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/search/streams?query=destiny%202';
 
     function RadaRada() {
         $.ajax({
             url: queryURL,
-            method: "GET",
-            header: {"Client-ID": "9b0njddb6vtmna80nklh2bna9y52v7"},
+            headers: {"Client-ID": "9b0njddb6vtmna80nklh2bna9y52v7"},
+            method: "GET"
         }).then(function (response) {          
             console.log(response);
         });
