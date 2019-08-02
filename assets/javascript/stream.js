@@ -1,48 +1,62 @@
 $(document).ready(function () {
 
-    var config = {
-        apiKey: "AIzaSyBkQLTirJjsxhFrTzi6E2okJBJaJzs7UHY",
-        authDomain: "project-1-f809e.firebaseapp.com",
-        databaseURL: "https://project-1-f809e.firebaseio.com",
-        projectId: "project-1-f809e",
-        storageBucket: "",
-        messagingSenderId: "1000072791220",
-        appId: "1:1000072791220:web:afef53e16c957cea"
-    };
-
-
-    firebase.initializeApp(config);
-
-    // Create a variable to reference the database
-    var database = firebase.database();
-
-    let hunted = "";
-
     $("#game-search-btn").on("click", function () {
 
-        hunted = $("game-search").val().trim();
+        event.preventDefault();
 
-        database.ref().set({ searchedGame: hunted })
+        let hunted = $("#game-search").val();
 
-        $("game-search").val("");
-    });
-
-    function RadaRada() {
+        $("#game-search").val("");
 
         let queryURL = 'https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/search/streams?query=' + hunted;
+
         $.ajax({
             url: queryURL,
             headers: { "Client-ID": "9b0njddb6vtmna80nklh2bna9y52v7" },
             method: "GET"
         }).then(function (response) {
             console.log(response);
+
+            for (i = 0; i < response.streams.length; i++) {
+
+                let stream = $("<div>");
+                let streamerName = response.streams[i].channel.display_name;
+                let streamLink = response.streams[i].channel.url;
+                let streamStart = response.streams[i].created_at;
+                let streamGame = response.streams[i].game;
+                let streamLogo = response.streams[i].channel.logo;
+
+                // logo generation
+                let logo = $("<img>").attr("src", streamLogo);
+                logo.attr("alt", "Streamer logo");
+
+                let name = $("<div>").text(streamerName);
+
+                let game = $("<div>").text(streamGame);
+
+                let startTime = $("<div>").text(streamStart);
+
+                let link = $("<div>");
+
+                // stacks the information
+                stream.append(
+                    logo,
+                    name,
+                    game,
+                    startTime,
+                    link
+                );
+                
+                $(".big2").append(stream);
+            }
+
+
         });
-    };
 
-    database.ref().on("value", function (snap) {
-
-        hunted = snap.val();
-
-        RadaRada();
+        
     });
+
+
+
+
 });
