@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+    $(".gamebox").hide();
+})
+
+
 var config = {
     apiKey: "AIzaSyBkQLTirJjsxhFrTzi6E2okJBJaJzs7UHY",
     authDomain: "project-1-f809e.firebaseapp.com",
@@ -18,6 +23,8 @@ var gamesearch = "";
 $(".submit").on("click", function (event) {
     event.preventDefault();
     var gamesearch = $("#game-input").val();
+    $(".gamebox").show();
+    $("input:text").text(function () { $(this).val("") });
 
     // Here we are building the URL we need to query the database
     var queryURL = "https://api.bestbuy.com/v1/products((search=" + gamesearch + ")&(categoryPath.id=pcmcat300300050002))?apiKey=lig8iC6qhgDZu9pSlKu3IInC&format=json";
@@ -35,27 +42,19 @@ $(".submit").on("click", function (event) {
             console.log(queryURL);
             console.log(response);
 
+                var gameImg = $("<img>").attr("src", response.products[0].image);
 
-            for (var i = 0; i < response.products.length; i++) {
-                console.log(response.products[0].image)
-                var gameImg = $("<img>").attr("src", response.products[i].image);
+                $(".gameimg").append(gameImg);
+                $(".gamename").html(response.products[0].albumTitle)
+                $(".gamedesc").html(response.products[0].longDescription);
+                $(".gameprice").html("Price: " + response.products[0].salePrice);
 
-                $(gameImg).attr("height", "140px")
-                $(gameImg).attr("width", "160px")
+                $(gameImg).attr("height", "400px")
+                $(gameImg).attr("width", "400px")
 
-                $(".gamebox").clone().appendTo(".gamecontainer");
-                $(".gamename").html(response.products[i].albumTitle)
-                $(".gamedesc").html(response.products[i].shortDescription);
-                $(".gameprice").html(response.products[i].salePrice);
-                $(".gamecontainer").append(gameimg)
-
-            $(gameImg).width(160);
-            $(gameImg).height(140);
              
-            }
-        });
-
-});
+            })
+        })
 
 
             // for (var i = 0; i < response.products.length; i++) {

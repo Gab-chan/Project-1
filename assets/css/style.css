@@ -1,32 +1,119 @@
-.jumbomargin {
-    margin-bottom: 5%;
+/* colors: 
+#1A1A1D
+#4E4E50
+#6F2232
+#950740
+#C3073F */
+
+#body1{
+    background-color: #1A1A1D;
+
 }
 
-.searchbox {
-    display: inline-block;
+#splash{
+    background-color: #4E4E50;
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top: 280px;
+    padding: 5%;
+    
+}
+
+#sph1{
+    color: #C3073F;
+    font-family: fantasy;
+    text-align: center;
+    font-size: 400%;
+}
+
+#spp{
+    text-align: center;
+    color: #1A1A1D
+}
+
+.body2{
+    background-color: #C3073F;
+}
+
+.homediv{
+    background-color: #4E4E50;
+    color: azure;
+    font-family: cursive;
+    width: 40%;
+    text-align: center;
+    position: relative;
+    left: 40%;
+    bottom: 300px;
+    padding: 2%;
+    margin-bottom: 1%;
+    
+}
+
+#hometopic{
+    background-image: url("../Images/target_background.jpg");
+    background-repeat: no-repeat;
+    color: #C3073F;
+    width: 25%;
+    height: 480px;
+    position: relative;
+    left: 5%;
+    top: 100px;
+    padding: 2%;
+}
+
+#topictext1{
+    text-align: center;
+    margin-top: 40%;
+}
+
+.footer{
+    width: 100%;
+    background-color: #1A1A1D;
+    color: azure;
+    position: fixed;
+    bottom: 0%;
+}
+
+.maintopic{
+    background-color: #4E4E50;
+    color:azure;
+    text-align: center;
+    font-family: cursive;
     width: 30%;
-    height: 42px;
-    margin-right: 1.5%;
+    position: relative;
+    margin-left: 30%;
+    margin-right: 20%;
+    top: 30px;
+    padding: 2%;
 }
 
-.searchbtn {
-    width: 10%;
-    height: 42px;
+
+
+
+
+
+
+
+.containerbox {
+    position: absolute;
+    right: 5%;
+    width: 50%;
+    height: auto;
+    margin-bottom: 10%;
 }
 
-
-.gamecontainer {
-    height: 500px;
+.gamelistbox {
+    margin-top: 5%;
     width: 100%;
 }
 
+img {
+    width: 400px;
+    height: 400px;
+}
 
-
-
-
-
-
-.gamebox {
+/* .gamebox {
     margin-bottom: 5%;
     background-image: linear-gradient(white, white, rgb(66, 207, 73));
     border-style: solid;
@@ -62,6 +149,11 @@
 .gamebox:hover {
     transform: scale(1.03, 1.03);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+} */
+
+
+
+
+.gameborderbox {
+    
 }
-
-
