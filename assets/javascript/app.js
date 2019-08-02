@@ -1,4 +1,4 @@
-var firebaseConfig = {
+var config = {
     apiKey: "AIzaSyBkQLTirJjsxhFrTzi6E2okJBJaJzs7UHY",
     authDomain: "project-1-f809e.firebaseapp.com",
     databaseURL: "https://project-1-f809e.firebaseio.com",
@@ -9,11 +9,10 @@ var firebaseConfig = {
 };
 
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
 
 // Create a variable to reference the database
 var database = firebase.database();
-var userinput = "Destiny";
 var gamesearch = "";
 
 $(".submit").on("click", function (event) {
@@ -37,6 +36,31 @@ $(".submit").on("click", function (event) {
             console.log(response);
 
 
+
+            for (var i = 0; i < response.products.length; i++) {
+
+                arr = [
+                    response.products[i].albumTitle,
+                    response.products[i].shortDescription,
+                    response.products[i].salePrice
+                ];
+                
+
+                $(".gamebox:first").clone().appendTo(".gamecontainer");
+                console.log(arr);
+                
+                $(".gamename").html(arr[0]);
+                $(".gamedesc").html(arr[1]);
+                $(".gameprice").html(arr[2]);
+
+             
+             
+            }
+        });
+
+});
+
+
             // for (var i = 0; i < response.products.length; i++) {
             //     console.log(response.products[0].image)
             //     var gameImg = $("<img>").attr("src", response.products[i].image);
@@ -55,31 +79,12 @@ $(".submit").on("click", function (event) {
 
 
 
-            for (var i = 0; i < response.products.length; i++) {
+
                 // arr = [
                 //     response.products[i].albumTitle,
                 //     response.products[i].shortDescription,
                 //     response.products[i].salePrice
                 // ];
-
-                $(".gamebox:first").clone().appendTo(".gamecontainer");
-                $(".gamename").html(response.products[i].albumTitle);
-                $(".gamedesc").html(response.products[i].shortDescription);
-                $(".gameprice").html(response.products[i].salePrice);
-                console.log(arr);
-                
-
-
-
-                // $(".gamedesc").html(arr[1]);
-
-
-
-            }
-        });
-
-});
-
 
 
 
