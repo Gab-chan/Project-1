@@ -56,15 +56,16 @@ $(".submit").on("click", function (event) {
 
 
             for (var i = 0; i < response.products.length; i++) {
+                // arr = [
+                //     response.products[i].albumTitle,
+                //     response.products[i].shortDescription,
+                //     response.products[i].salePrice
+                // ];
 
-                arr = [
-                    response.products[i].albumTitle,
-                    response.products[i].shortDescription,
-                    response.products[i].salePrice
-                ];
-                
-
-                $(".gamebox:first").clone().appendTo(".gamecontainer").html(arr);
+                $(".gamebox:first").clone().appendTo(".gamecontainer");
+                $(".gamename").html(response.products[i].albumTitle);
+                $(".gamedesc").html(response.products[i].shortDescription);
+                $(".gameprice").html(response.products[i].salePrice);
                 console.log(arr);
                 
 
