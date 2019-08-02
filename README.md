@@ -57,5 +57,9 @@ the app will allow a user to search the name of a game and get the best prices a
 
 #### API's that may be used to later
 
+<<<<<<< HEAD
 * [I'm a relative reference to a repository file](/Design_Project-1.xd)
 >>>>>>> 1afdda505e958d949b3cb56010902249d0abaef9
+=======
+* [I'm a relative reference to a repository file](/Design_Project-1.pdf)
+>>>>>>> 67b574ebce4d8ad494f499f94a23569f92ce2509

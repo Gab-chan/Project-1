@@ -36,24 +36,21 @@ $(".submit").on("click", function (event) {
             console.log(response);
 
 
-
             for (var i = 0; i < response.products.length; i++) {
+                console.log(response.products[0].image)
+                var gameImg = $("<img>").attr("src", response.products[i].image);
 
-                arr = [
-                    response.products[i].albumTitle,
-                    response.products[i].shortDescription,
-                    response.products[i].salePrice
-                ];
-                
+                $(gameImg).attr("height", "140px")
+                $(gameImg).attr("width", "160px")
 
-                $(".gamebox:first").clone().appendTo(".gamecontainer");
-                console.log(arr);
-                
-                $(".gamename").html(arr[0]);
-                $(".gamedesc").html(arr[1]);
-                $(".gameprice").html(arr[2]);
+                $(".gamebox").clone().appendTo(".gamecontainer");
+                $(".gamename").html(response.products[i].albumTitle)
+                $(".gamedesc").html(response.products[i].shortDescription);
+                $(".gameprice").html(response.products[i].salePrice);
+                $(".gamecontainer").append(gameimg)
 
-             
+            $(gameImg).width(160);
+            $(gameImg).height(140);
              
             }
         });
