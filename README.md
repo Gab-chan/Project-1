@@ -35,4 +35,4 @@ the app will allow a user to search the name of a game and get the best prices a
 
 #### API's that may be used to later
 
-* [I'm a relative reference to a repository file](/Design_Project-1.xd)
+* [I'm a relative reference to a repository file](/Design_Project-1.pdf)
