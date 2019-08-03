@@ -18,7 +18,7 @@
 
 <body class="body2">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Hunt!</a>
+        <a class="navbar-brand" href="#">GameHunt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,45 +26,86 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Pray for Games<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Games<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Pray for Streamers<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="hunt-streamers.html">Streamers<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="game-input" type="text" placeholder="Search for games"> <input
-                    class="btn btn-outline-success my-2 my-sm-0 submit" type="submit" value="Search">
-            </form>
         </div>
     </nav>
 
-    <div class="maintopic">
-        <h1>Top Games</h1>
+    <div class="searchcontainer border-bottom">
+        <div class="gamesearchbox">
+            <h2 class="searchtitle text-center">Search your favorite title!</h2>
+            <form>
+                <fieldset>
+                    <input class="form-control searchbarsize searchbar" id="game-input" type="text"
+                        placeholder="Enter a game title!" />
+                    <button class="btn-primary submit submitcss" type="submit" value="Search">Search</button>
+                    <br>
+                </fieldset>
+            </form>
+        </div>
     </div>
+    </div>
+
+
+
 
     <div class="gamelistbox">
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <div class="gameimg"></div>
+                    <div class="img1 gameimg"></div>
                 </div>
                 <div class="containerbox">
                     <div class="gamecontainer">
                         <div class="gamebox shadow p-3 mb-5 bg-white rounded">
-                            <div class="gamename"></div>
+                            <div class="gamename gamenametext"></div>
                             <hr>
                             <div class="gamedesc"></div>
-                            <div class="gameaddons"></div>
+                            <br>
+                            <!-- <p class="text-center">Other Additions</p> -->
+                            <!-- <div class="gameaddons1 text-center"></div>
+                            <div class="gameaddons2 text-center"></div>
+                            <div class="gameaddons3 text-center"></div> -->
                             <hr>
-                            <div class="gameprice"></div>
+                            <div class="gameprice text-center buynow"></div>
+                            <a class=".buynow" href="https://api.bestbuy.com/click/-/5537400/cart" target="_blank"> Buy
+                                Now</a>
+                        </div>
+                    </div>
+                    <div class="streamforgame">
+                        <div class="container-fluid cardwidth">
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <div class="card">
+                                        <div class="card-horizontal">
+                                            <div class="img-square-wrapper">
+                                                <img class="twitchimg" src="assets/images/twitch.png"
+                                                    alt="Card image cap">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Browse our livestream!</h4>
+                                                <p class="card-text">Watch your favorite streamers playing this game here!</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+
+    <div class="topsearches"></div>
+
+
 
     <div class="footer">
         <h2>footer</h2>

@@ -1,5 +1,7 @@
 $( document ).ready(function() {
     $(".gamebox").hide();
+    $(".gamecontainer").hide();
+    $(".streamforgame").hide();
 })
 
 
@@ -24,6 +26,8 @@ $(".submit").on("click", function (event) {
     event.preventDefault();
     var gamesearch = $("#game-input").val();
     $(".gamebox").show();
+    $(".gamecontainer").show();
+    $(".streamforgame").show();
     $("input:text").text(function () { $(this).val("") });
 
     // Here we are building the URL we need to query the database
@@ -38,20 +42,27 @@ $(".submit").on("click", function (event) {
         // We store all of the retrieved data inside of an object called "response"
         .then(function (response) {
 
+
             // Log the queryURL
             console.log(queryURL);
             console.log(response);
 
                 var gameImg = $("<img>").attr("src", response.products[0].image);
 
-                $(".gameimg").append(gameImg);
+                $(".gameimg").html(gameImg);
                 $(".gamename").html(response.products[0].albumTitle)
                 $(".gamedesc").html(response.products[0].longDescription);
-                $(".gameprice").html("Price: " + response.products[0].salePrice);
-                $(".gameaddons").html("Other Additions " + response.products[2].name);
+                $(".gameprice").html("Price: " + response.products[0].salePrice + " -");
+                $(".buynow").appendTo(".gameprice");
+                // $(".gameaddons1").append(response.products[1].albumTitle);
+                // $(".gameaddons2").append(response.products[2].albumTitle);
+                // $(".gameaddons3").append(response.products[3].albumTitle);
+
+
 
                 $(gameImg).attr("height", "400px")
                 $(gameImg).attr("width", "400px")
+
 
              
             })

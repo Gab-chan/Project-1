@@ -32,10 +32,6 @@
     color: #1A1A1D
 }
 
-.body2{
-    background-color: #C3073F;
-}
-
 .homediv{
     background-color: #4E4E50;
     color: azure;
@@ -97,10 +93,10 @@
 
 .containerbox {
     position: absolute;
-    right: 5%;
+    right: 10%;
     width: 50%;
     height: auto;
-    margin-bottom: 10%;
+    margin-bottom: 0%;
 }
 
 .gamelistbox {
@@ -108,7 +104,7 @@
     width: 100%;
 }
 
-img {
+.img1 {
     width: 400px;
     height: 400px;
 }
@@ -152,8 +148,75 @@ img {
 } */
 
 
+.gamenametext {
+    text-align: center;
+    font-size: 140%;
+    font-weight: 700;
+}
+
+.searchcontainer {
+    width: 100%;
+    height: 220px;
+    background-color: rgb(86, 93, 99);
+    border-bottom: 5px;
+    border-bottom-color: #C3073F;
+}
+
+.searchtitle {
+    padding-top: 2%;
+    color: white;
+}
+
+.searchbar {
+    width: 30%;
+    height: 45px;
+    margin-top: 1%;
+    margin-left: 35%;
+}
+
+.submitcss {
+    border-radius: 5px;
+    width: 15%;
+    height: 40px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 42.5%;
+}
+
+.buynow {
+    font-weight: 800px;
+}
+
+.gameprice {
+    margin-left: 37%;
+    display: inline;
+    text-align: center;
+}
+
+.buynow:link {
+    text-align: center;
+    text-decoration: underline;
+  }
 
 
-.gameborderbox {
-    
+
+/* --- Twitch Card --- */
+
+  .card-horizontal {
+      margin-right: 15%;
+    display: flex;
+    flex: 1 1 200;
+}
+
+.cardwidth {
+    margin-top: -20px;
+    display: relative;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20%;
+}
+
+.twitchimg {
+    width: 230px;
+    height: 150px;
 }
