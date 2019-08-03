@@ -48,6 +48,7 @@ $(".submit").on("click", function (event) {
                 $(".gamename").html(response.products[0].albumTitle)
                 $(".gamedesc").html(response.products[0].longDescription);
                 $(".gameprice").html("Price: " + response.products[0].salePrice);
+                $(".gameaddons").html("Other Additions " + response.products[2].name);
 
                 $(gameImg).attr("height", "400px")
                 $(gameImg).attr("width", "400px")
