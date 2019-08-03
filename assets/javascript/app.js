@@ -22,6 +22,8 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var gamesearch = "";
 
+var ref = firebase.database().ref().child('/searchedGames');
+
 
 $(".submit").on("click", function (event) {
     $(".submit").trigger("blur");
@@ -79,7 +81,11 @@ $(".submit").on("click", function (event) {
                 $(gameImg).attr("width", "400px")
 
 
-             
+                database.ref().child("searched-games").push({
+                    gamesearch: gamesearch
+                  });
+
+                  
             })
         })
 
