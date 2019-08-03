@@ -22,12 +22,27 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var gamesearch = "";
 
+
 $(".submit").on("click", function (event) {
+    $(".submit").trigger("blur");
     event.preventDefault();
     var gamesearch = $("#game-input").val();
     $(".gamebox").show();
     $(".gamecontainer").show();
     $(".streamforgame").show();
+
+    if( $("input:text").val().length === 0 ) {
+        $(".gamebox").hide();
+        $(".gamecontainer").hide();
+        $(".streamforgame").hide();
+        $(".searchbar").addClass("warning")
+        // $(".searchbar").css({'border': '1px solid red'});
+
+        setTimeout(function () {
+            $(".searchbar").removeClass("warning");
+        }, 3000);
+     }
+
     $("input:text").text(function () { $(this).val("") });
 
     // Here we are building the URL we need to query the database
@@ -67,6 +82,9 @@ $(".submit").on("click", function (event) {
              
             })
         })
+
+
+        
 
 
             // for (var i = 0; i < response.products.length; i++) {
