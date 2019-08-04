@@ -2,7 +2,8 @@ $( document ).ready(function() {
     $(".gamebox").hide();
     $(".gamecontainer").hide();
     $(".streamforgame").hide();
-})
+    
+});
 
 
 var config = {
@@ -32,17 +33,19 @@ $(".submit").on("click", function (event) {
     $(".gamebox").show();
     $(".gamecontainer").show();
     $(".streamforgame").show();
+    $(".gamelistbox").show();
 
     if( $("input:text").val().length === 0 ) {
         $(".gamebox").hide();
         $(".gamecontainer").hide();
         $(".streamforgame").hide();
-        $(".searchbar").addClass("warning")
+        $(".gamelistbox").hide();
+        $(".searchbar").addClass("warning");
         // $(".searchbar").css({'border': '1px solid red'});
 
         setTimeout(function () {
             $(".searchbar").removeClass("warning");
-        }, 3000);
+        }, 2500);
      }
 
     $("input:text").text(function () { $(this).val("") });
@@ -77,8 +80,8 @@ $(".submit").on("click", function (event) {
 
 
 
-                $(gameImg).attr("height", "400px")
-                $(gameImg).attr("width", "400px")
+                $(gameImg).attr("height", "400px");
+                $(gameImg).attr("width", "400px");
 
 
                 database.ref().child("searched-games").push({

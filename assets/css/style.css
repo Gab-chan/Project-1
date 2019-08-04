@@ -134,6 +134,11 @@
     margin-left: 35%;
 }
 
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .submitcss {
     border-radius: 5px;
     width: 15%;
