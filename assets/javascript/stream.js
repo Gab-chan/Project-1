@@ -17,54 +17,68 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
 
+            let streamList = $("<div>");
+
             for (i = 0; i < response.streams.length; i++) {
 
                 // generation of information from the response
-                let stream = $("<div>");
+                let stream = $("<div>").attr("class", "row");
                 let streamerName = response.streams[i].channel.display_name;
                 let streamLink = response.streams[i].channel.url;
                 let streamStart = response.streams[i].created_at;
                 let streamGame = response.streams[i].game;
                 let streamLogo = response.streams[i].channel.logo;
+                let streamViewers = response.streams[i].viewers;
 
-                let block = $("<div>").attr("class", "row");
-                let leftSide = $("<div>").attr("class", "column col-md-1");
-                let rightSide = $("<div>").attr("class", "column col-md-11");
-
-
+                // formatting of streamer block
+                let leftSide = $("<div>").attr("class", "column col-md-2");
+                let rightSide = $("<div>").attr("class", "column col-md-10");
 
                 // logo generation
                 let logo = $("<img>").attr("src", streamLogo);
                 logo.attr("alt", "Streamer logo");
+                logo.attr("class", "stream-logo");
 
                 // information to HTML bridge
                 let name = $("<div>").text(streamerName);
 
                 let game = $("<div>").text(streamGame);
 
-                let startTime = $("<div>").text(streamStart);
+                let startTime = $("<div>");
+                let unixTimeStart = moment(streamStart).format("X");
+                let localTimeStart = moment.unix(unixTimeStart).format("HH:MM");
+                startTime.text("started at " + localTimeStart + " your time, military format");
 
                 let link = $("<div>");
                 let source = $("<a>").attr("href", streamLink)
                 source.text(streamLink)
                 link.append(source);
 
+                let viewers = streamViewers + " viewing this stream currently";
+
                 // stacks the information
-                stream.append(
-                    logo,
+                leftSide.append(logo);
+                rightSide.append(
                     name,
                     game,
                     startTime,
-                    link
+                    link,
+                    viewers
                 );
-                
-                $(".big2").append(stream);
+
+                stream.append(
+                    leftSide,
+                    rightSide
+                );
+
+
+                streamList.append(stream);
             }
-
-
+            $(".big2").empty();
+            $(".big2").append(streamList);
         });
 
-        
+
     });
 
 
