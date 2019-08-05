@@ -4,7 +4,6 @@
 /* #navbarTogglerDemo02 > ul > li.nav-item.active > a {
     color: rgb(170, 170, 170);
 }
-
 #navbarTogglerDemo02 > ul > li:nth-child(2) > a {
     color: white;
 } */
@@ -26,11 +25,15 @@
     font-family: fantasy;
     text-align: center;
     font-size: 400%;
+    border-bottom: 4px solid #C3073F;
 }
 
 #spp{
     text-align: center;
-    color: #1A1A1D
+    color: #1A1A1D;
+    position: relative;
+    left: 40%;
+    top: 10px;
 }
 
 
@@ -101,6 +104,7 @@
 .gamelistbox {
     margin-top: 5%;
     width: 100%;
+    
 }
 
 .img1 { /* --- Resizing all images on the page --- */
@@ -125,6 +129,7 @@
 .searchtitle {
     padding-top: 2%;
     color: white;
+    
 }
 
 .searchbar {
@@ -132,11 +137,6 @@
     height: 45px;
     margin-top: 1%;
     margin-left: 35%;
-}
-
-.form-control:focus {
-    outline: none;
-    box-shadow: none;
 }
 
 .submitcss {
@@ -201,26 +201,90 @@
     height: 150px;
 }
 
-
-
-
-
 /* --- Footer--- */
 
 .footer{
     width: 100%;
     height: 50px;
-    background-color: #343A40;
+    background-color: #1A1A1D; 
     color: white;
     position: fixed;
     bottom: 0%;
     text-align: center;
-    font-size: 18px;
-    padding-top: .75%;
+    font-size: 20px;
+    padding-top: 1%;;
 
 }
 
 
+
+
+
+#navbar{
+    background-color: #C3073F;
+}
+
+.navbar1{
+    border: 0px solid white;
+    
+}
+
+
+#wolf{
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    width: 500px;
+    height: 500px;
+    border: 4px solid #C3073F;
+}
+
+.shopping-box {
+    width: 150px;
+    height: 200px;
+    right:35px;
+    top:-90px;
+    position: absolute;
+    border-radius: 0 0;
+
+}
+
+.shopping-box .fa{
+    font-size: 25px;
+    color: #fff;
+    bottom: 60px;
+    right: 70px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#shopping{
+    width: 45px;
+    height: 40px;
+}
+
+.twitch-box {
+    width: 300px;
+    height: 200px;
+    right:-35px;
+    top:-89px;
+    position: absolute;
+    border-radius: 0 0;
+    
+
+}
+
+#twitch-logo{
+    width: 60px;
+    height: 42px;
+    font-size: 25px;
+    color: #fff;
+    bottom: 60px;
+    right: 70px;
+    cursor: pointer;
+    position: absolute;
+}
+    
 
 
 /* --- Game Box --- */
@@ -256,8 +320,8 @@
     line-height: 40px;
     margin-top: -7%;
 }
-
 .gamebox:hover {
     transform: scale(1.03, 1.03);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 } */
+

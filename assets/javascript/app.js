@@ -31,8 +31,9 @@ var ref = firebase.database().ref().child('/searchedGames');
 $(".submit").on("click", function (event) {
     $(".submit").trigger("blur");
     event.preventDefault();
-    var gamesearch = $("#game-input").val();
+    var gamesearch = $("#game-input").val().trim();
     gamesearch = gamesearch.split(" ").join('&search=');
+
     $(".gamebox").show();
     $(".gamecontainer").show();
     $(".streamforgame").show();
