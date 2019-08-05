@@ -28,8 +28,8 @@ $(document).ready(function () {
                 let streamLogo = response.streams[i].channel.logo;
 
                 let block = $("<div>").attr("class", "row");
-                let leftSide = $("<div>").attr("class", );
-                let 
+                let leftSide = $("<div>").attr("class", "column col-md-1");
+                let rightSide = $("<div>").attr("class", "column col-md-11");
 
 
 
