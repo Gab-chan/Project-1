@@ -6,8 +6,6 @@ $(document).ready(function () {
 
         let hunted = $("#game-input").val();
 
-
-
         let queryURL = "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/search/streams?query=" + hunted;
 
         $.ajax({
@@ -31,8 +29,8 @@ $(document).ready(function () {
                 let streamViewers = response.streams[i].viewers;
 
                 // formatting of streamer block
-                let leftSide = $("<div>").attr("class", "column col-md-4");
-                let rightSide = $("<div>").attr("class", "column col-md-8");
+                let leftSide = $("<div>").attr("class", "column col-md-3");
+                let rightSide = $("<div>").attr("class", "column col-md-9");
 
                 // logo generation
                 let logo = $("<img>").attr("src", streamLogo);
@@ -44,6 +42,7 @@ $(document).ready(function () {
 
                 let game = $("<div>").text(streamGame);
 
+                // time conversion for the start of the stream
                 let startTime = $("<div>");
                 let unixTimeStart = moment(streamStart).format("X");
                 let localTimeStart = moment.unix(unixTimeStart).format("HH:mm");
@@ -80,7 +79,7 @@ $(document).ready(function () {
                 streamList.append(stream);
             }
 
-            // once completed, the list is added to its place
+            // once completed, the list is added to its place, and replaces the previous list if there was one.
             $(".streamforgame").empty();
             $(".streamforgame").append(streamList);
         });
