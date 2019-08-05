@@ -17,7 +17,7 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
 
-            let streamList = $("<div>");
+            let streamList = $("<div>").addClass("row");
 
             for (i = 0; i < response.streams.length; i++) {
 
@@ -31,8 +31,8 @@ $(document).ready(function () {
                 let streamViewers = response.streams[i].viewers;
 
                 // formatting of streamer block
-                let leftSide = $("<div>").attr("class", "column col-md-3");
-                let rightSide = $("<div>").attr("class", "column col-md-9");
+                let leftSide = $("<div>").attr("class", "column col-md-4");
+                let rightSide = $("<div>").attr("class", "column col-md-8");
 
                 // logo generation
                 let logo = $("<img>").attr("src", streamLogo);
@@ -46,9 +46,10 @@ $(document).ready(function () {
 
                 let startTime = $("<div>");
                 let unixTimeStart = moment(streamStart).format("X");
-                let localTimeStart = moment.unix(unixTimeStart).format("HH:MM");
+                let localTimeStart = moment.unix(unixTimeStart).format("HH:mm");
                 startTime.text("started at " + localTimeStart + " your time, military format");
 
+                // creates the link to be added to the streamer card
                 let link = $("<div>");
                 let source = $("<a>").attr("href", streamLink)
                 source.text(streamLink)
@@ -80,6 +81,7 @@ $(document).ready(function () {
             }
 
             // once completed, the list is added to its place
+            $(".streamforgame").empty();
             $(".streamforgame").append(streamList);
         });
 
