@@ -80,8 +80,7 @@ $(document).ready(function () {
             }
 
             // once completed, the list is added to its place, and replaces the previous list if there was one.
-            $(".streamforgame").empty();
-            $(".streamforgame").append(streamList);
+            $(".streamforgame").prepend(streamList);
         });
 
         $("#game-input").val("");
