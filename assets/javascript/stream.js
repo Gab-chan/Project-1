@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
-    $("#game-search-btn").on("click", function () {
+    $("#game-input-btn").on("click", function () {
 
         event.preventDefault();
 
-        let hunted = $("#game-search").val();
+        let hunted = $("#game-input").val();
 
-        $("#game-search").val("");
 
-        let queryURL = 'https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/search/streams?query=' + hunted;
+
+        let queryURL = "https://cors-anywhere.herokuapp.com/https://api.twitch.tv/kraken/search/streams?query=" + hunted;
 
         $.ajax({
             url: queryURL,
@@ -31,8 +31,8 @@ $(document).ready(function () {
                 let streamViewers = response.streams[i].viewers;
 
                 // formatting of streamer block
-                let leftSide = $("<div>").attr("class", "column col-md-2");
-                let rightSide = $("<div>").attr("class", "column col-md-10");
+                let leftSide = $("<div>").attr("class", "column col-md-3");
+                let rightSide = $("<div>").attr("class", "column col-md-9");
 
                 // logo generation
                 let logo = $("<img>").attr("src", streamLogo);
@@ -58,6 +58,7 @@ $(document).ready(function () {
 
                 // stacks the information
                 leftSide.append(logo);
+                leftSide.addClass("innerstrCard")
                 rightSide.append(
                     name,
                     game,
@@ -65,23 +66,24 @@ $(document).ready(function () {
                     link,
                     viewers
                 );
-
+                rightSide.addClass("innerstrCard")
+                
+                // adds both side to the streamer card
                 stream.append(
                     leftSide,
                     rightSide
                 );
-
-
+                stream.attr("class", "stream-card");
+                
+                //adds streamer card to the list div
                 streamList.append(stream);
             }
-            $(".big2").empty();
-            $(".big2").append(streamList);
+
+            // once completed, the list is added to its place
+            $(".streamforgame").append(streamList);
         });
 
-
+        $("#game-input").val("");
     });
-
-
-
 
 });
