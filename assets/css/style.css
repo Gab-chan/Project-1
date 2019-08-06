@@ -279,7 +279,9 @@
 /* dynamically created streamer cards */
 .stream-card {
     background: #311331;
+    margin: 1%;
     margin-bottom: 10%;
+    
 }
 
 .innerstrCard {

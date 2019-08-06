@@ -46,7 +46,7 @@ $(document).ready(function () {
                 let startTime = $("<div>");
                 let unixTimeStart = moment(streamStart).format("X");
                 let localTimeStart = moment.unix(unixTimeStart).format("HH:mm");
-                startTime.text("started at " + localTimeStart + " your time, military format");
+                startTime.text("started at " + localTimeStart + " your time, Military format");
 
                 // creates the link to be added to the streamer card
                 let link = $("<div>");
@@ -80,6 +80,7 @@ $(document).ready(function () {
             }
 
             // once completed, the list is added to its place, and replaces the previous list if there was one.
+            $(".streamforgame").empty();
             $(".streamforgame").prepend(streamList);
         });
 
