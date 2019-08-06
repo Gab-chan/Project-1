@@ -54,6 +54,7 @@ $(document).ready(function () {
                 source.text(streamLink)
                 link.append(source);
 
+
                 let viewers = streamViewers + " viewing this stream currently";
 
                 // stacks the information
@@ -80,6 +81,7 @@ $(document).ready(function () {
             }
 
             // once completed, the list is added to its place, and replaces the previous list if there was one.
+            $(".streamforgame").empty();
             $(".streamforgame").prepend(streamList);
         });
 
