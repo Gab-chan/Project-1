@@ -43,7 +43,7 @@ $(".submit").on("click", function (event) {
         }, 3000);
      }
 
-    $("input:text").text(function () { $(this).val("") });
+    // $("input:text").text(function () { $(this).val("") });
 
     // Here we are building the URL we need to query the database
     var queryURL = "https://api.bestbuy.com/v1/products((search=" + gamesearch + ")&(categoryPath.id=pcmcat300300050002))?apiKey=lig8iC6qhgDZu9pSlKu3IInC&format=json";
