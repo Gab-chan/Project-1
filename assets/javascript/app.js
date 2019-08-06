@@ -83,8 +83,23 @@ $(".submit").on("click", function (event) {
                 gamesearch: gamesearch
             });
 
-        })
-});
+
+                  // --- Media Query --- //
+
+                  if (window.matchMedia('(max-width: 768px)').matches)
+                  {
+                      // Display short description on smaller screens
+                    $(".gamedesc").html(response.products[0].shortDescription);
+                    // Small images on search
+                    $(gameImg).attr("height", "200px");
+                    $(gameImg).attr("width", "200px");
+                    
+
+                   
+                  }
+
+                })
+        });
 
 var queryURL = "https://api.bestbuy.com/v1/products((search=Games)&(categoryPath.id=pcmcat300300050002))?apiKey=lig8iC6qhgDZu9pSlKu3IInC&sort=bestSellingRank.asc&show=name,bestSellingRank,image,addToCartUrl&pageSize=5&format=json";
 
@@ -133,6 +148,8 @@ $.ajax({
 
 
     });
+
+
 
 
 
