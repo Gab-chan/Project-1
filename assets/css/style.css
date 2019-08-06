@@ -101,9 +101,10 @@
     width: 100%;
 }
 
-.bestsellmargin {
-    width: 30%;
+.row {
+    margin-left: 100px;
 }
+
 
 .topimg1, .topimg2, .topimg3, .topimg4, .topimg5 {
     margin-right: 2%;
@@ -121,13 +122,8 @@
     transform: scale(1.05); 
 }
 
-.bscontainer {
-    margin-left: 15%;
-}
-
 .bstitle {
     margin-top: 1.5%;
-    margin-left: 27.5%;
     margin-bottom: 3%;
 }
 
@@ -291,9 +287,8 @@
 } */
 
 .shopping-box {
-    width: 150px;
     height: 200px;
-    right:35px;
+    right:2%2mm;
     top:-90px;
     position: absolute;
     border-radius: 0 0;
@@ -391,3 +386,60 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 } */
 
+
+
+@media only screen and (max-width: 768px) {
+    .bestsellingbox {
+        text-align: center;
+    }
+    .row {
+            width: 800px;
+            margin-left: -30%;
+    }
+
+    .topimg1, .topimg2, .topimg3, .topimg4, .topimg5 {
+        margin-right: 4%;
+        width: 20%;
+    }
+    
+    .topname1, .topname2, .topname3, .topname4, .topname5 {
+        color: black;
+        width: 16%;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .topname1:hover, .topname2:hover, .topname3:hover, .topname4:hover, .topname5:hover {
+        transform: scale(1.02); 
+    }
+}
+
+@media only screen and (max-width: 505px) {
+    .row {
+        width: 800px;
+        margin-left: -5%;
+    }
+
+    .topimg2, .topimg4 {
+        display:none
+    }
+
+    .searchbar {
+        width: 50%;
+        height: 45px;
+        margin-top: 1%;
+        margin-left: 25%;
+    }
+
+    .submitcss {
+        background-color: rgb(46, 161, 35);
+        width: 25%;
+        margin-left: 37.5%;
+    }
+
+    .bssubtitle {
+        display: none;
+    }
+
+
+ }
