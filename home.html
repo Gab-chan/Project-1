@@ -18,8 +18,8 @@
 </head>
 
 <body class="body2">
-    <nav class="navbar navbar-expand-lg navbar-dark bg border-bottom" id="navbar">
-        <a class="navbar-brand navbar1" href="home.html">GameHunt</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg" id="navbar">
+        <a class="navbar-brand navbar1" href="index.html">GameHunt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,24 +36,20 @@
         </div>
     </nav>
 
+    <div class="shopping-box"><a
+            href="https://www.bestbuy.com/site/electronics/video-games/abcat0700000.c?id=abcat0700000"><img
+                id="shopping" class="fa fa-shopping-bag" src="assets/Images/shoppingbag2.jpg"></a></div>
+
+    <div class="twitch-box"><a href="https://www.twitch.tv/"><img id="twitch-logo" src="assets/Images/twitch.png"></a>
+    </div>
 
     <div class="searchcontainer border-bottom">
         <div class="gamesearchbox">
             <h2 class="searchtitle text-center">Search your favorite title!</h2>
             <form>
-                <fieldset>
-                    <input class="form-control searchbarsize searchbar" id="game-input" type="text"
-                        placeholder="Enter a game title!">
-                    <button class="btn-success submit submitcss" type="submit" value="Search">Search</button>
-                    <br>
-
-                    <div class="shopping-box"><a
-                        href="https://www.bestbuy.com/site/electronics/video-games/abcat0700000.c?id=abcat0700000"><img
-                            id="shopping" class="fa fa-shopping-bag" src="assets/images/shoppingbag2.jpg"></a></div>
-            
-                <div class="twitch-box"><a href="https://www.twitch.tv/"><img id="twitch-logo" src="assets/Images/twitch.png"></a>
-                </div>
-                </fieldset>
+                <input id="game-input" for="game-input-btn" class="form-control searchbarsize searchbar" type="text" placeholder="Enter a game title!">
+                <button id="game-input-btn" class="btn-success submit submitcss " type="submit">Search</button>
+                <br>
             </form>
         </div>
     </div>
@@ -111,10 +107,9 @@
                                                     alt="Card image cap">
                                             </div>
                                             <div class="card-body">
-                                                <h4 class="card-title">Browse our livestream!</h4>
-                                                <p class="card-text">Watch your favorite streamers
-                                                    playing this
-                                                    game here!</p>
+                                                <h4 class="card-title">Browse livestreams on Twitch!</h4>
+                                                <p class="card-text">Watch your favorite streamers playing this game
+                                                    here!</p>
                                             </div>
 
                                         </div>
@@ -137,6 +132,8 @@
 
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/stream.js"></script>
 
 </html>
