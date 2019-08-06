@@ -88,7 +88,55 @@
     padding: 2%;
 }
 
+/* --- Best Selling items --- */
 
+/* .topcontainer {
+    display: inline;
+    width: 15%;
+}
+
+*/
+
+.bestselling {
+    width: 100%;
+}
+
+.bestsellmargin {
+    width: 30%;
+}
+
+.topimg1, .topimg2, .topimg3, .topimg4, .topimg5 {
+    margin-right: 2%;
+    width: 20%;
+}
+
+.topname1, .topname2, .topname3, .topname4, .topname5 {
+    color: black;
+    width: 16%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.topname1:hover, .topname2:hover, .topname3:hover, .topname4:hover, .topname5:hover {
+    transform: scale(1.05); 
+}
+
+.bscontainer {
+    margin-left: 15%;
+}
+
+.bstitle {
+    margin-top: 1.5%;
+    margin-left: 27.5%;
+    margin-bottom: 3%;
+}
+
+.bssubtitle {
+    color: rgb(94, 94, 94);
+    position: absolute;
+    top: 43.5%;
+    left: 45.5%;
+}
 
 
 /* --- Search Game Page --- */
@@ -104,6 +152,7 @@
 .gamelistbox {
     margin-top: 5%;
     width: 100%;
+    height: 550px;
     
 }
 
@@ -140,6 +189,7 @@
 }
 
 .submitcss {
+    background-color: rgb(46, 161, 35);
     border-radius: 5px;
     width: 15%;
     height: 40px;
@@ -178,7 +228,7 @@
 /* --- Twitch Card --- */
 
   .card-horizontal {
-      margin-right: 15%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     display: flex;
     flex: 1 1 200;
 }
@@ -186,9 +236,15 @@
 .cardwidth {
     margin-top: -20px;
     display: relative;
-    width: 100%;
+    width: auto;
     height: 100px;
     margin-bottom: 35%;
+    transition: all .2s ease-in-out;
+}
+
+.cardwidth:hover {
+    transform: scale(1.02); 
+
 }
 
 .twitchimg {
@@ -211,24 +267,28 @@
 
 }
 
+
+
+
+
 #navbar{
     background-color: #C3073F;
 }
 
 .navbar1{
-    border: 2px solid white;
+    border: 0px solid white;
     
 }
 
 
-#wolf{
-    position: relative;
-    left: 37%;
-    bottom: 450px;
+/* #wolf{
+    position: absolute;
+    left: 33%;
+    top: 40%;
     width: 500px;
     height: 500px;
     border: 4px solid #C3073F;
-}
+} */
 
 .shopping-box {
     width: 150px;
@@ -255,12 +315,12 @@
 }
 
 .twitch-box {
-    width: 300px;
+    width: 50px;
     height: 200px;
-    right:-35px;
     top:-89px;
     position: absolute;
     border-radius: 0 0;
+    right: 7%;
     
 
 }
@@ -307,18 +367,23 @@
   width: 200px;
   text-align: center;
 }
+
 .gameimg {
     margin-top: 7.5%;
 }
+
 .gamename, .gameprice {
     font-weight: 600;
 }
+
 .gamedesc {
     font-size: 80%;
 }
+
 .gameimg, .gamename, .gamedesc {
     margin-bottom: 5%;
 }
+
 .gameprice {
     line-height: 40px;
     margin-top: -7%;
