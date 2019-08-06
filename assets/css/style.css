@@ -221,14 +221,14 @@
 }
 
 
-#wolf{
+/* #wolf{
     position: relative;
     left: 37%;
     bottom: 450px;
     width: 500px;
     height: 500px;
     border: 4px solid #C3073F;
-}
+} */
 
 .shopping-box {
     width: 150px;
@@ -268,6 +268,28 @@
 #twitch-logo{
     width: 60px;
     height: 42px;
+    font-size: 25px;
+    color: #fff;
+    bottom: 60px;
+    right: 70px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.wolf {
+    width: 300px;
+    height: 200px;
+    left:-35px;
+    top:-87px;
+    position: absolute;
+    border-radius: 0 0;
+    
+
+}
+
+#wolf{
+    width: 65px;
+    height: 45px;
     font-size: 25px;
     color: #fff;
     bottom: 60px;
