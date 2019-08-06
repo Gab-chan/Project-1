@@ -291,9 +291,9 @@
 } */
 
 .shopping-box {
-    width: 150px;
+    
     height: 200px;
-    right:35px;
+    right:2%;
     top:-90px;
     position: absolute;
     border-radius: 0 0;
