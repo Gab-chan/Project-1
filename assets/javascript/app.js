@@ -83,6 +83,21 @@ $(".submit").on("click", function (event) {
                     gamesearch: gamesearch
                   });
 
+
+                  // --- Media Query --- //
+
+                  if (window.matchMedia('(max-width: 768px)').matches)
+                  {
+                      // Display short description on smaller screens
+                    $(".gamedesc").html(response.products[0].shortDescription);
+                    // Small images on search
+                    $(gameImg).attr("height", "200px");
+                    $(gameImg).attr("width", "200px");
+                    
+
+                   
+                  }
+
                 })
         });
 
@@ -133,6 +148,8 @@ $(".submit").on("click", function (event) {
 
 
             });
+
+
 
 
 
