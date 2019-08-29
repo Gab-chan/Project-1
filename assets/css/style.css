@@ -442,7 +442,16 @@
     }
 }
 
-@media only screen and (max-width: 505px) {
+@media only screen and (max-width: 375px) {
+
+    body{
+        width: auto;
+    }
+
+    div {
+        width: 100%;
+    }
+    
     .row {
         width: 800px;
         margin-left: -5%;
